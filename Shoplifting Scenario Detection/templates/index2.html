@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .forms-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .auth-form {
+            flex: 1;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Firebase Authentication</h1>
+
+    <div class="forms-container">
+        <div class="auth-form">
+            <h2>Signup</h2>
+            <form action="/signup" method="post">
+                <label for="signup-email">Email:</label><br>
+                <input type="email" id="signup-email" name="email"><br>
+                <label for="signup-password">Password:</label><br>
+                <input type="password" id="signup-password" name="password"><br>
+                <input type="submit" value="Signup">
+            </form>
+        </div>
+
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <label for="login-email">Email:</label><br>
+                <input type="email" id="login-email" name="email"><br>
+                <label for="login-password">Password:</label><br>
+                <input type="password" id="login-password" name="password"><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

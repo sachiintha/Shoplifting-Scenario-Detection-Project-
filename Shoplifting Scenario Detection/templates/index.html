@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ TITLE }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+        }
+        h1 {
+            color: #ff5733;
+            text-align: center;
+            padding-top: 2rem;
+        }
+        p {
+            color: #337ab7;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .warning {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid #131311;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ TITLE }}</h1>
+    </header>
+    <main>
+        <br>
+    <br>
+        <!-- Display warning about shoplifting -->
+        {% if shoplifting_warning %}
+            <p class="warning">{{ shoplifting_warning }}</p>
+        {% endif %}
+
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </main>
+</body>
+</html>
